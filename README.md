@@ -1,5 +1,5 @@
 # CorrectTabs
-<img src="Icon/correctTabIcon.png" align="right"
+<img src="CorrectTabs/Assets.xcassets/AppIcon.appiconset/correctTabIcon-1024.png" align="right"
      title="RedirectPlease by Alexander Perathoner" width="100" height="100">
 Use ⌘+1-9 to switch between your tabs, ignoring the pinned ones.
 <br><br>
