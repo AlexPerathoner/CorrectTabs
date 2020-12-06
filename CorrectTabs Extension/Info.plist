@@ -40,11 +40,11 @@
 			<key>Action</key>
 			<string>Command</string>
 			<key>Identifier</key>
-			<string>Button</string>
+			<string>CorrectTabs</string>
 			<key>Image</key>
-			<string>ToolbarItemIcon.pdf</string>
+			<string>correctTabIcon-256.png</string>
 			<key>Label</key>
-			<string>Your Button</string>
+			<string>CorrectTabs</string>
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
@@ -57,6 +57,6 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableDescription</key>
-	<string>This is CorrectTabs Extension. You should tell us what your extension does here.</string>
+	<string>Use ⌘+1-9 to switch between your tabs, ignoring the pinned ones.</string>
 </dict>
 </plist>

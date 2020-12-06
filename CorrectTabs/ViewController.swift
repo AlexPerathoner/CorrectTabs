@@ -15,7 +15,14 @@ let extensionBundleIdentifier = "AlexP.CorrectTabs-Extension"
 class ViewController: NSViewController {
 
     @IBOutlet var appNameLabel: NSTextField!
-    
+	@IBAction func openGithub(_ sender: Any) {
+		let url = URL(string: "https://github.com/AlexPerathoner")!
+		if NSWorkspace.shared.open(url) {
+			print("default browser was successfully opened")
+
+		}
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         self.appNameLabel.stringValue = appName
