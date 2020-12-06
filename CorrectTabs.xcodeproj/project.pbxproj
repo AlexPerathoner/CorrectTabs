@@ -18,6 +18,10 @@
 		FA58362C257D1797009E2BD8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = FA58362B257D1797009E2BD8 /* script.js */; };
 		FA58362E257D1797009E2BD8 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FA58362D257D1797009E2BD8 /* ToolbarItemIcon.pdf */; };
 		FA583631257D1797009E2BD8 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA58362F257D1797009E2BD8 /* SafariExtensionViewController.xib */; };
+		FA67DF7F257D215400DBE7DA /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA67DF7E257D215400DBE7DA /* HotKey.framework */; };
+		FA67DF80257D215400DBE7DA /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA67DF7E257D215400DBE7DA /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA67DF82257D219500DBE7DA /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA67DF7E257D215400DBE7DA /* HotKey.framework */; };
+		FA67DF83257D219500DBE7DA /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA67DF7E257D215400DBE7DA /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,28 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA67DF81257D215400DBE7DA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA67DF80257D215400DBE7DA /* HotKey.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA67DF84257D219500DBE7DA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA67DF83257D219500DBE7DA /* HotKey.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +87,8 @@
 		FA583630257D1797009E2BD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		FA583632257D1797009E2BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA583633257D1797009E2BD8 /* CorrectTabs_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CorrectTabs_Extension.entitlements; sourceTree = "<group>"; };
+		FA58363D257D2095009E2BD8 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		FA67DF7E257D215400DBE7DA /* HotKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HotKey.framework; path = Carthage/Build/Mac/HotKey.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA67DF7F257D215400DBE7DA /* HotKey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA67DF82257D219500DBE7DA /* HotKey.framework in Frameworks */,
 				FA583624257D1797009E2BD8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +147,7 @@
 		FA583622257D1797009E2BD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA67DF7E257D215400DBE7DA /* HotKey.framework */,
 				FA583623257D1797009E2BD8 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -126,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				FA583626257D1797009E2BD8 /* SafariExtensionHandler.swift */,
+				FA58363D257D2095009E2BD8 /* Cartfile */,
 				FA583628257D1797009E2BD8 /* SafariExtensionViewController.swift */,
 				FA58362F257D1797009E2BD8 /* SafariExtensionViewController.xib */,
 				FA583632257D1797009E2BD8 /* Info.plist */,
@@ -155,6 +187,7 @@
 				FA583609257D1795009E2BD8 /* Frameworks */,
 				FA58360A257D1795009E2BD8 /* Resources */,
 				FA583639257D1797009E2BD8 /* Embed App Extensions */,
+				FA67DF81257D215400DBE7DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +206,7 @@
 				FA58361A257D1797009E2BD8 /* Sources */,
 				FA58361B257D1797009E2BD8 /* Frameworks */,
 				FA58361C257D1797009E2BD8 /* Resources */,
+				FA67DF84257D219500DBE7DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,6 +446,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "CorrectTabs Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -432,6 +470,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "CorrectTabs Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +498,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = CorrectTabs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,6 +525,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = CorrectTabs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
