@@ -164,7 +164,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 	
     override func toolbarItemClicked(in window: SFSafariWindow) {
         // This method will be called when your toolbar item is clicked.
-		print("Toolbar item was clicked!")
+		let url = URL(string: "https://github.com/AlexPerathoner")!
+		NSWorkspace.shared.open(url)
     }
     
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {

@@ -57,6 +57,6 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableDescription</key>
-	<string>Use ⌘+1-9 to switch between your tabs, ignoring the pinned ones.</string>
+	<string>Use ⌘+1-9 to switch between your tabs, ignoring the pinned ones. Check out https://github.com/AlexPerathoner</string>
 </dict>
 </plist>
