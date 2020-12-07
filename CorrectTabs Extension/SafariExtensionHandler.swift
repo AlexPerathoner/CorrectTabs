@@ -17,7 +17,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 0)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 0)
+				}
 			}
 		}
 	}
@@ -27,7 +29,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 1)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 1)
+				}
 			}
 		}
 	}
@@ -37,7 +41,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 2)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 2)
+				}
 			}
 		}
 	}
@@ -47,7 +53,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 3)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 3)
+				}
 			}
 		}
 	}
@@ -57,7 +65,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 4)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 4)
+				}
 			}
 		}
 	}
@@ -67,7 +77,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 5)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 5)
+				}
 			}
 		}
 	}
@@ -77,7 +89,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 6)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 6)
+				}
 			}
 		}
 	}
@@ -87,7 +101,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 7)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 7)
+				}
 			}
 		}
 	}
@@ -97,7 +113,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 				return
 			}
 			hotKey.keyDownHandler = {
-				self.activateCorrectTab(index: 8)
+				if(NSWorkspace.shared.frontmostApplication?.localizedName == "Safari") {
+					self.activateCorrectTab(index: 8)
+				}
 			}
 		}
 	}
