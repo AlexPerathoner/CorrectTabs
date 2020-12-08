@@ -120,35 +120,49 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 		}
 	}
 	
+	func setupHotkeys() {
+		NSLog("Hotkeys now active")
+		hotKeyOne = HotKey(keyCombo: KeyCombo(key: .one, modifiers: .command))
+		hotKeyTwo = HotKey(keyCombo: KeyCombo(key: .two, modifiers: .command))
+		hotKeyThree = HotKey(keyCombo: KeyCombo(key: .three, modifiers: .command))
+		hotKeyFour = HotKey(keyCombo: KeyCombo(key: .four, modifiers: .command))
+		hotKeyFive = HotKey(keyCombo: KeyCombo(key: .five, modifiers: .command))
+		hotKeySix = HotKey(keyCombo: KeyCombo(key: .six, modifiers: .command))
+		hotKeySeven = HotKey(keyCombo: KeyCombo(key: .seven, modifiers: .command))
+		hotKeyEight = HotKey(keyCombo: KeyCombo(key: .eight, modifiers: .command))
+		hotKeyNine = HotKey(keyCombo: KeyCombo(key: .nine, modifiers: .command))
+	}
+	
+	func deleteHotkeys() {
+		NSLog("Hotkeys deactivate")
+		hotKeyOne = nil
+		hotKeyTwo = nil
+		hotKeyThree = nil
+		hotKeyFour = nil
+		hotKeyFive = nil
+		hotKeySix = nil
+		hotKeySeven = nil
+		hotKeyEight = nil
+		hotKeyNine = nil
+	}
+	
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
-		if(hotKeyOne == nil) {
-			hotKeyOne = HotKey(keyCombo: KeyCombo(key: .one, modifiers: .command))
-		}
-		if(hotKeyTwo == nil) {
-			hotKeyTwo = HotKey(keyCombo: KeyCombo(key: .two, modifiers: .command))
-		}
-		if(hotKeyThree == nil) {
-			hotKeyThree = HotKey(keyCombo: KeyCombo(key: .three, modifiers: .command))
-		}
-		if(hotKeyFour == nil) {
-			hotKeyFour = HotKey(keyCombo: KeyCombo(key: .four, modifiers: .command))
-		}
-		if(hotKeyFive == nil) {
-			hotKeyFive = HotKey(keyCombo: KeyCombo(key: .five, modifiers: .command))
-		}
-		if(hotKeySix == nil) {
-			hotKeySix = HotKey(keyCombo: KeyCombo(key: .six, modifiers: .command))
-		}
-		if(hotKeySeven == nil) {
-			hotKeySeven = HotKey(keyCombo: KeyCombo(key: .seven, modifiers: .command))
-		}
-		if(hotKeyEight == nil) {
-			hotKeyEight = HotKey(keyCombo: KeyCombo(key: .eight, modifiers: .command))
-		}
-		if(hotKeyNine == nil) {
-			hotKeyNine = HotKey(keyCombo: KeyCombo(key: .nine, modifiers: .command))
+		setupHotkeys()
+		if(watcher == nil) {
+			watcher = NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(SafariExtensionHandler.frontmostAppChanged), name: NSWorkspace.didActivateApplicationNotification, object: nil)
 		}
     }
+	
+	
+	@objc func frontmostAppChanged() {
+		if(NSWorkspace.shared.frontmostApplication?.localizedName! == "Safari") {
+			setupHotkeys()
+		} else {
+			deleteHotkeys()
+		}
+	}
+	
+	var watcher: Any?
 	
 	func getNonPinnedTabs(completion: @escaping ([SFSafariTab]) -> ()) {
 		SFSafariApplication.getActiveWindow { window in // get safari window
@@ -174,8 +188,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 	
 	func activateCorrectTab(index: Int) {
 		getNonPinnedTabs { (nonPinnedTabs) in
-			nonPinnedTabs[index].activate {
-				NSLog("Activated ", index)
+			if(nonPinnedTabs.count > index) {
+				nonPinnedTabs[index].activate {}
 			}
 		}
 	}
