@@ -17,8 +17,3 @@ Use ⌘+1-9 to switch between your tabs, while ignoring the pinned ones.
 ## License
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
-
----
-Donations are welcome!
-
-[![Donate-Paypal](https://img.shields.io/badge/donate-paypal-yellow.svg?style=flat)](https://paypal.me/AlexanderPerathoner)
